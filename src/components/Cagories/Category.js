@@ -6,12 +6,14 @@ import './category.scss'
 const Category = ({ data }) => {
   const listCategory = data.category
   const [currentCategory, setCurrentCategory] = useState(1)
+  const numberCategory = Object.values(listCategory).length
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      setCurrentCategory(currentCategory + 1)
+      if (currentCategory < numberCategory)
+        setCurrentCategory(currentCategory + 1)
     },
     onSwipedRight: () => {
-      setCurrentCategory(currentCategory - 1)
+      if (currentCategory > 0) setCurrentCategory(currentCategory - 1)
     },
   })
 
