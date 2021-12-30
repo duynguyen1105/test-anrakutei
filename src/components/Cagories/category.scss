@@ -1,0 +1,24 @@
+.list-categories {
+  display: flex;
+  overflow: scroll;
+  padding: 15px 10px;
+
+  button {
+    transition-duration: 0.4s;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0 5px;
+    min-width: 155px;
+    font-size: 14px;
+    &.active {
+      background-color: #008cba; /* Green */
+      color: white;
+    }
+  }
+}
